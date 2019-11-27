@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" class="js-focus-visible"><head>
   <title>&lt;model-viewer&gt; Augmented Reality</title>
   <meta charset="utf-8">
@@ -32,12 +31,66 @@
 
   <div class="sample">
     <div id="demo-container-1" class="demo">
-<model-viewer src="YZF-R25.glb" ios-src="YZF-R25.usda" ar="" camera-controls="" alt="A 3D model of an astronaut" background-color="#222" ios-src="assets/Astronaut.usdz" magic-leap="" unstable-webxr="" data-js-focus-visible=""></model-viewer>
+<model-viewer src="assets/Astronaut.glb" ar="" camera-controls="" alt="A 3D model of an astronaut" background-color="#222" ios-src="assets/Astronaut.usdz" magic-leap="" unstable-webxr="" data-js-focus-visible=""></model-viewer>
           </div>
-    
+    <div class="content">
+      <div class="wrapper">
+
+        <a class="lockup" href="../index.html"><div class="icon-button icon-modelviewer-black"></div><h1>examples</h1></a>
+        <div class="heading">
+          <h2 class="demo-title">Augmented Reality</h2>
+          <h4>This demonstrates several augmented reality features, including <code>unstable-webxr</code>, <code>magic-leap</code>, <code>ios-src</code>, &amp; the accompanying attribute <code>quick-look-browsers</code>.</h4>
+        </div>
+        <example-snippet stamp-to="demo-container-1" highlight-as="html">
+          <template>
+<model-viewer src="assets/Astronaut.glb" ar="" camera-controls="" alt="A 3D model of an astronaut" background-color="#222" ios-src="assets/Astronaut.usdz" magic-leap="" unstable-webxr=""></model-viewer>
+          </template>
+        <pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>model-viewer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>assets/Astronaut.glb<span class="token punctuation">"</span></span> <span class="token attr-name">ar</span> <span class="token attr-name">camera-controls</span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>A 3D model of an astronaut<span class="token punctuation">"</span></span> <span class="token attr-name">background-color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#222<span class="token punctuation">"</span></span> <span class="token attr-name">ios-src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>assets/Astronaut.usdz<span class="token punctuation">"</span></span> <span class="token attr-name">magic-leap</span> <span class="token attr-name">unstable-webxr</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>model-viewer</span><span class="token punctuation">&gt;</span></span></code></pre></example-snippet>
+
+        <h3 style="margin-top: 40px; padding-bottom: 8px;" class="border-bottom">iOS, Magic Leap &amp; WebXR</h3>
+        <ul class="list-attribute">
+          <li>
+            <div>ar</div>
+            <p>Enable the ability to launch
+            <a href="https://developers.google.com/ar/develop/java/scene-viewer">Scene Viewer</a>
+            on supported devices.</p>
+          </li>
+          <li>
+            <div>ios-src</div>
+            <p>Provides augmented reality on supported iOS 12+ devices via AR Quick Look, but requires an additional USDZ model.</p>
+          </li>
+          <li>
+            <div>quick-look-browsers</div>
+            <p>Set this attribute to control which iOS browsers will be allowed
+              to launch AR Quick Look on iOS. Allowed values are "safari" and
+              "chrome". You can specify any number of browsers separated by
+              whitespace, for example: "safari chrome". Defaults to "safari".</p>
+          </li>
+          <li>
+            <div>magic-leap</div>
+            <p>Provides augmented reality on Magic Leap's Helio browser. Requires that the primary model be a GLB file, and the <a href="https://www.npmjs.com/package/@magicleap/prismatic">@magicleap/prismatic</a> library.</p>
+          </li>
+          <li>
+            <div>unstable-webxr</div>
+            <p>Provides augmented reality via the experimental <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>, implemented in Chrome Canary only behind flags. For more information see the <a href="https://codelabs.developers.google.com/codelabs/ar-with-webxr/#1">AR with WebXR Codelab</a>.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
   </div>
 
-  
+  <div class="footer">
+    <ul>
+      <li class="attribution">
+        <a href="https://poly.google.com/view/dLHpzNdygsg">Astronaut</a> by <a href="https://poly.google.com/user/4aEd8rQgKu2">Poly</a>,
+        licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a>.
+      </li>
+    </ul>
+
+    <div style="margin-top:24px;" class="copyright">©Copyright 2018 Google Inc. Licensed under the Apache License 2.0.</div>
+    <div><a href="https://github.com/GoogleWebComponents/model-viewer">Github</a> ∙ <a href="https://model-viewer.glitch.me/">Glitch</a> ∙ <a href="https://github.com/GoogleWebComponents/model-viewer/issues">Bug report</a></div>
+  </div>
 
   <!-- Documentation-specific dependencies: -->
   <script type="module" src="./built/dependencies.js">
